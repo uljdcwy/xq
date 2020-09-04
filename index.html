@@ -136,7 +136,31 @@
               ctx.arc(((l * 35) + 15),((k * 35) + 15),10,0,2*Math.PI,false);
               ctx.textBaseline="middle";
               ctx.textAlign = "center";
-              ctx.fillText(initDataArr[k][l],((l * 35) + 15),((k * 35) + 15));
+              switch (initDataArr[k][l].valueOf()) {
+                case 1:
+                  ctx.fillText("将",((l * 35) + 15),((k * 35) + 15));
+                  break;
+                case 2:
+                  ctx.fillText("车",((l * 35) + 15),((k * 35) + 15));
+                  break;
+                case 3:
+                  ctx.fillText("马",((l * 35) + 15),((k * 35) + 15));
+                  break;
+                case 4:
+                  ctx.fillText("炮",((l * 35) + 15),((k * 35) + 15));
+                  break;
+                case 5:
+                  ctx.fillText("象",((l * 35) + 15),((k * 35) + 15));
+                  break;
+                case 6:
+                  ctx.fillText("士",((l * 35) + 15),((k * 35) + 15));
+                  break;
+                case 7:
+                  ctx.fillText("卒",((l * 35) + 15),((k * 35) + 15));
+                  break;
+                default:
+
+              };
               ctx.stroke();
             };
           };
@@ -159,7 +183,32 @@
           var oText = initDataArr[ofsY][ofsX];
           ctx.textBaseline = "middle";
           ctx.textAlign = "center";
-          ctx.fillText(oText,((ofsX * 35) + 15),((ofsY * 35) + 15));
+
+          switch (initDataArr[ofsY][ofsX].valueOf()) {
+            case 1:
+              ctx.fillText("将",((ofsX * 35) + 15),((ofsY * 35) + 15));
+              break;
+            case 2:
+              ctx.fillText("车",((ofsX * 35) + 15),((ofsY * 35) + 15));
+              break;
+            case 3:
+              ctx.fillText("马",((ofsX * 35) + 15),((ofsY * 35) + 15));
+              break;
+            case 4:
+              ctx.fillText("炮",((ofsX * 35) + 15),((ofsY * 35) + 15));
+              break;
+            case 5:
+              ctx.fillText("象",((ofsX * 35) + 15),((ofsY * 35) + 15));
+              break;
+            case 6:
+              ctx.fillText("士",((ofsX * 35) + 15),((ofsY * 35) + 15));
+              break;
+            case 7:
+              ctx.fillText("卒",((ofsX * 35) + 15),((ofsY * 35) + 15));
+              break;
+            default:
+
+          };
           ctx.stroke();
           if(oText == 0){
             clickSwitch.clickSwitchStatus = false;
@@ -289,7 +338,7 @@
                 //console.log("error4");
                 //console.log(clickSwitchOfsX + 1);
                 //console.log(clickSwitchOfsY);
-                if(initDataArr[clickSwitchOfsY][clickSwitchOfsX + 1] != 0 ){
+                if((initDataArr[clickSwitchOfsY][clickSwitchOfsX + 1]) != 0 ){
                   clickSwitch.passLine = true;
                 }
                 //console.log(4);
